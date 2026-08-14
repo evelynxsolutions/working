@@ -29,11 +29,19 @@
     hamBtn.addEventListener('click', function () {
       mobMenu.classList.add('open');
       document.body.style.overflow = 'hidden';
+      // Trigger staggered animation for links
+      var links = mobMenu.querySelectorAll('.mob-link');
+      links.forEach(function(link, index) {
+        link.style.transitionDelay = (0.1 + (index * 0.07)) + 's';
+      });
     });
     if (mobClose) {
       mobClose.addEventListener('click', function () {
         mobMenu.classList.remove('open');
         document.body.style.overflow = '';
+        // Reset delays
+        var links = mobMenu.querySelectorAll('.mob-link');
+        links.forEach(function(link) { link.style.transitionDelay = '0s'; });
       });
     }
     var ml = document.querySelectorAll('.mob-link');
@@ -45,7 +53,7 @@
     }
   }
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && mobMenu) {
+    if (e.key === 'Escape' && mobMenu && mobMenu.classList.contains('open')) {
       mobMenu.classList.remove('open');
       document.body.style.overflow = '';
     }
@@ -113,8 +121,8 @@
       var required = form.querySelectorAll('[required]');
       var valid = true;
       required.forEach(function (f) {
-        if (!f.value.trim()) { valid = false; f.style.borderColor = '#C33A22'; }
-        else { f.style.borderColor = ''; }
+        if (!f.value.trim()) { valid = false; f.style.borderColor = '#C33A22'; f.style.boxShadow = '0 0 0 4px rgba(195,58,34,0.08)'; }
+        else { f.style.borderColor = ''; f.style.boxShadow = ''; }
       });
       if (!valid) return;
       var successEl = document.getElementById('formSuccess');
@@ -124,6 +132,7 @@
   }
 })();
 
+// Enhanced Card Spotlight Tracker
 if (window.matchMedia('(hover: hover)').matches) {
   var cards = document.querySelectorAll('.card');
   for (var i = 0; i < cards.length; i++) {

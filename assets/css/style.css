@@ -36,6 +36,10 @@
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: var(--snow); }
   ::-webkit-scrollbar-thumb { background: var(--stone-light); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--stone); }
+
+  /* Extra: Custom text selection */
+  ::selection { background: var(--rhodo); color: var(--paper); }
 
   a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
     outline: 2px solid var(--rhodo);
@@ -84,17 +88,32 @@
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     padding: 15px 30px; border-radius: 8px; font-weight: 600; font-size: 0.92rem;
     font-family: 'Inter', sans-serif; letter-spacing: -0.01em;
-    transition: all 0.25s cubic-bezier(0.16,1,0.3,1); white-space: nowrap; border: 1.5px solid transparent;
+    transition: all 0.3s cubic-bezier(0.16,1,0.3,1); white-space: nowrap; border: 1.5px solid transparent;
+    position: relative; overflow: hidden;
   }
+  /* Extra: Swipe effect on buttons */
+  .btn::after {
+    content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.15), transparent);
+    transition: left 0.5s ease;
+  }
+  .btn:hover::after { left: 100%; }
+
   .btn-primary { background: var(--rock); color: var(--paper); }
-  .btn-primary:hover { background: var(--rhodo); transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(195,58,34,0.4); }
+  .btn-primary:hover { background: var(--rhodo); transform: translateY(-2px); box-shadow: 0 12px 24px -8px rgba(195,58,34,0.4); }
+  
   .btn-accent { background: var(--rhodo); color: #fff; }
-  .btn-accent:hover { background: var(--rhodo-dark); transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(195,58,34,0.45); }
+  .btn-accent:hover { background: var(--rhodo-dark); transform: translateY(-2px); box-shadow: 0 12px 24px -8px rgba(195,58,34,0.45); }
+  
   .btn-outline { border-color: var(--line-on-light); color: var(--rock); background: transparent; }
-  .btn-outline:hover { border-color: var(--rock); transform: translateY(-2px); }
+  .btn-outline:hover { border-color: var(--rock); transform: translateY(-2px); background: var(--snow); }
+  
   .btn-outline-light { border-color: var(--line-on-dark); color: var(--paper); background: transparent; }
   .btn-outline-light:hover { border-color: var(--paper); transform: translateY(-2px); }
+  
   .btn-sm { padding: 11px 22px; font-size: 0.82rem; }
+  /* Extra: active state scaling */
+  .btn:active { transform: translateY(0) scale(0.98); }
 
   /* ---------- Nav ---------- */
   .nav-bar {
@@ -105,14 +124,23 @@
     border-bottom: 1px solid transparent;
   }
   .nav-bar.scrolled { background: rgba(252,251,248,0.92); border-bottom-color: var(--line-on-light); }
-  .nav-link { font-size: 0.88rem; font-weight: 500; color: var(--rock); opacity: 0.62; transition: opacity 0.2s; position: relative; }
+  
+  .nav-link { font-size: 0.88rem; font-weight: 500; color: var(--rock); opacity: 0.62; transition: opacity 0.2s; position: relative; padding-bottom: 4px; }
   .nav-link:hover, .nav-link.active { opacity: 1; }
-  .nav-link.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; background: var(--rhodo); }
+  /* Extra: Animated underline for nav links */
+  .nav-link::after {
+    content: ''; position: absolute; left: 0; bottom: 0; height: 2px; width: 0%;
+    background: var(--rhodo); transition: width 0.3s cubic-bezier(0.16,1,0.3,1);
+  }
+  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
   .peak-mark {
     width: 34px; height: 34px; border-radius: 9px; background: var(--rock);
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
   }
+  /* Extra: Brand mark hover effect */
+  .peak-mark:hover { transform: rotate(45deg); border-radius: 50%; }
 
   .mob-overlay {
     position: fixed; inset: 0; z-index: 60; background: var(--paper);
@@ -121,10 +149,17 @@
   }
   .mob-overlay.open { transform: translateY(0); }
 
-  /* ---------- Contour signature element ---------- */
-  .contour-wrap {
-    position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0;
+  /* Extra: Mobile links slide-in effect */
+  .mob-link { 
+    display: block; 
+    transform: translateX(-20px); opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease, color 0.2s ease;
   }
+  .mob-overlay.open .mob-link { transform: translateX(0); opacity: 1; }
+  .mob-link:hover { color: var(--rhodo); transform: translateX(8px) !important; }
+
+  /* ---------- Contour signature element ---------- */
+  .contour-wrap { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
   .contour-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
   .contour-line { animation: contourDrift 22s ease-in-out infinite; }
   .contour-line:nth-child(2) { animation-delay: -6s; animation-duration: 26s; }
@@ -145,13 +180,21 @@
     background: var(--paper); border: 1px solid var(--line-on-light); border-radius: 16px;
     transition: all 0.35s cubic-bezier(0.16,1,0.3,1); box-shadow: var(--shadow-soft);
   }
-  .card:hover { transform: translateY(-4px); border-color: var(--rock); box-shadow: 0 16px 36px -18px rgba(21,22,26,0.25); }
+  /* Extra: Enhanced hover state with border lift */
+  .card:hover { 
+    transform: translateY(-6px); 
+    border-color: var(--rhodo); 
+    box-shadow: 0 20px 40px -18px rgba(21,22,26,0.25); 
+  }
 
   .tag {
     font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; font-weight: 500;
     letter-spacing: 0.04em; text-transform: uppercase;
     padding: 5px 11px; border-radius: 20px; display: inline-block;
+    transition: transform 0.2s ease;
   }
+  /* Extra: Tag hover pop */
+  .tag:hover { transform: scale(1.05); }
   .tag-rhodo { background: rgba(195,58,34,0.09); color: var(--rhodo-dark); }
   .tag-sky { background: rgba(43,110,134,0.09); color: var(--sky-dark); }
   .tag-stone { background: rgba(139,138,130,0.12); color: var(--stone); }
@@ -161,16 +204,14 @@
 
   /* ---------- Marquee ---------- */
   .marquee-wrap { overflow: hidden; white-space: nowrap; mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent); }
-  .marquee-track { display: inline-flex; animation: marquee 38s linear infinite; }
+  .marquee-track { display: inline-flex; animation: marquee 38s linear infinite; transition: animation-play-state 0.3s; }
   .marquee-track:hover { animation-play-state: paused; }
   @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-  /* ---------- Scroll reveal (for content below the fold) ---------- */
+  /* ---------- Scroll reveal ---------- */
   .rv { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
   .rv.in { opacity: 1; transform: translateY(0); }
 
-  /* ---------- Load reveal (for above-the-fold content — must not depend on
-     a scroll event ever firing, unlike .rv which is IntersectionObserver-gated) ---------- */
   .rv-load { opacity: 0; animation: loadIn 0.85s cubic-bezier(0.16,1,0.3,1) both; }
   @keyframes loadIn { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -178,10 +219,15 @@
   #prog { position: fixed; top: 0; left: 0; height: 2px; background: var(--rhodo); width: 0%; z-index: 100; transition: width 0.1s linear; }
 
   /* ---------- Accordion (FAQ) ---------- */
-  .acc-item { border-bottom: 1px solid var(--line-on-light); }
-  .acc-trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; text-align: left; background: none; border: none; }
-  .acc-panel { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-  .acc-item.open .acc-panel { max-height: 260px; }
+  .acc-item { border-bottom: 1px solid var(--line-on-light); transition: background-color 0.2s ease; }
+  /* Extra: Accordion hover feedback */
+  .acc-item:hover { background-color: rgba(21,22,26,0.015); }
+  
+  .acc-trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 0; text-align: left; background: none; border: none; transition: color 0.2s ease; }
+  .acc-trigger:hover { color: var(--rhodo); }
+  
+  .acc-panel { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1); }
+  .acc-item.open .acc-panel { max-height: 320px; }
   .acc-icon { transition: transform 0.3s ease; flex-shrink: 0; }
   .acc-item.open .acc-icon { transform: rotate(45deg); }
 
@@ -190,9 +236,11 @@
   .field-input {
     width: 100%; padding: 13px 16px; border: 1.5px solid var(--line-on-light); border-radius: 9px;
     font-family: 'Inter', sans-serif; font-size: 0.92rem; background: var(--paper); color: var(--rock);
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
   }
-  .field-input:focus { outline: none; border-color: var(--rock); }
+  /* Extra: Input hover and focus ring enhancement */
+  .field-input:hover { border-color: var(--stone-light); }
+  .field-input:focus { outline: none; border-color: var(--rhodo); box-shadow: 0 0 0 4px rgba(195,58,34,0.08); }
   .field-input::placeholder { color: var(--stone-light); }
 
   /* ---------- Compliance strip ---------- */
@@ -200,20 +248,25 @@
     display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border-radius: 20px;
     border: 1px solid var(--line-on-dark); font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem;
     letter-spacing: 0.03em; color: rgba(245,243,238,0.72);
+    transition: background 0.2s ease, transform 0.2s ease;
   }
+  /* Extra: Compliance pill hover */
+  .compliance-pill:hover { background: rgba(245,243,238,0.05); transform: translateY(-2px); }
 
   /* ---------- Misc ---------- */
   .section { position: relative; z-index: 10; }
   .grain { position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.025; mix-blend-mode: overlay; }
 }
 
-
+/* ==========================================================================
+   Card Spotlight Effect (Mouse Tracking)
+   ========================================================================== */
 .card > * { position: relative; z-index: 1; }
 .card::before {
   content: '';
   position: absolute; inset: 0; z-index: 0;
   border-radius: inherit;
-  background: radial-gradient(480px circle at var(--mx, 50%) var(--my, 50%), rgba(195,58,34,0.07), transparent 65%);
+  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 50%), rgba(195,58,34,0.08), transparent 45%);
   opacity: 0;
   transition: opacity 0.35s ease;
   pointer-events: none;
