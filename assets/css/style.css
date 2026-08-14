@@ -1,17 +1,5 @@
 /* ==========================================================================
-   EVELYNX SOLUTIONS — Design System
-   Concept: "Built at altitude" — Himalayan contour-line precision meets
-   engineered software/creative craft. Dark "Rock" base, warm "Snow"
-   surfaces, rhododendron red + prayer-flag sky as a deliberate duo-accent.
-
-   NOTE ON @layer: this file is loaded after assets/css/tailwind.css, which
-   declares the canonical layer order (theme, base, components, utilities).
-   Wrapping our rules in the SAME layer names merges them into that order
-   instead of appending an unlayered block — unlayered CSS always beats
-   layered CSS in the cascade regardless of specificity, which would
-   otherwise make things like `a{color:inherit}` silently defeat utility
-   classes like `.text-paper/40`. Keeping everything layered is what lets
-   Tailwind utilities correctly override these defaults when combined.
+   EVELYNX SOLUTIONS 
    ========================================================================== */
 
 :root {
@@ -218,3 +206,16 @@
   .section { position: relative; z-index: 10; }
   .grain { position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.025; mix-blend-mode: overlay; }
 }
+
+
+.card > * { position: relative; z-index: 1; }
+.card::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  border-radius: inherit;
+  background: radial-gradient(480px circle at var(--mx, 50%) var(--my, 50%), rgba(195,58,34,0.07), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.card:hover::before { opacity: 1; }

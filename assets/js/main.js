@@ -123,3 +123,14 @@
     });
   }
 })();
+
+if (window.matchMedia('(hover: hover)').matches) {
+  var cards = document.querySelectorAll('.card');
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].addEventListener('mousemove', function (e) {
+      var r = this.getBoundingClientRect();
+      this.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      this.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  }
+}
