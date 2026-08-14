@@ -259,16 +259,33 @@
 }
 
 /* ==========================================================================
-   Card Spotlight Effect (Mouse Tracking)
+   Card Spotlight Effect (Bulletproof version)
    ========================================================================== */
-.card > * { position: relative; z-index: 1; }
+
+.card {
+  position: relative !important; 
+  overflow: hidden !important;
+}
+
+/* Ensure all direct children sit above the spotlight */
+.card > * { 
+  position: relative; 
+  z-index: 1; 
+}
+
+/* The spotlight element */
 .card::before {
   content: '';
-  position: absolute; inset: 0; z-index: 0;
+  position: absolute; 
+  inset: 0; 
+  z-index: 0;
   border-radius: inherit;
-  background: radial-gradient(500px circle at var(--mx, 50%) var(--my, 50%), rgba(195,58,34,0.08), transparent 45%);
+  background: radial-gradient(450px circle at var(--mx, 50%) var(--my, 50%), rgba(195,58,34,0.10), transparent 45%);
   opacity: 0;
   transition: opacity 0.35s ease;
   pointer-events: none;
 }
-.card:hover::before { opacity: 1; }
+
+.card:hover::before { 
+  opacity: 1; 
+}
