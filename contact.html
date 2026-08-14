@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Evelynx Solutions</title>
+<meta name="description" content="Get in touch with Evelynx Solutions in Kathmandu, Nepal — email, WhatsApp, or the form below. We reply within 24 hours.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%2315161A%22/><path d=%22M50 26 L74 68 L26 68 Z%22 fill=%22%23F5F3EE%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
+<link rel="stylesheet" href="assets/css/tailwind.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="prog"></div>
+
+<nav class="nav-bar" id="navbar">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[76px]">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="peak-mark"><iconify-icon icon="ph:mountains-bold" width="18" style="color:#F5F3EE"></iconify-icon></span>
+      <span class="font-mono text-[0.92rem] font-medium tracking-[0.08em] text-rock">EVELYNX</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="solutions.html" class="nav-link">Solutions</a>
+      <a href="work.html" class="nav-link">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="hidden sm:inline-flex btn btn-accent btn-sm">Start a Project</a>
+      <button id="hamBtn" class="lg:hidden flex flex-col gap-[5px] p-2" aria-label="Open menu">
+        <span class="block w-5 h-[1.5px] bg-rock"></span>
+        <span class="block w-5 h-[1.5px] bg-rock"></span>
+        <span class="block w-3.5 h-[1.5px] bg-rock"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-overlay" id="mobMenu">
+  <div class="flex items-center justify-between px-6 h-[76px] border-b border-rock/8">
+    <span class="font-mono text-[0.92rem] font-medium tracking-[0.08em] text-rock">EVELYNX</span>
+    <button id="mobClose" class="p-2 text-rock" aria-label="Close menu"><iconify-icon icon="ph:x-bold" width="22"></iconify-icon></button>
+  </div>
+  <nav class="flex flex-col px-6 mt-4 overflow-y-auto">
+    <a href="solutions.html" class="mob-link font-display text-3xl font-semibold text-rock py-4 border-b border-rock/8">Solutions</a>
+    <a href="work.html" class="mob-link font-display text-3xl font-semibold text-rock py-4 border-b border-rock/8">Work</a>
+    <a href="about.html" class="mob-link font-display text-3xl font-semibold text-rock py-4 border-b border-rock/8">About</a>
+    <a href="careers.html" class="mob-link font-display text-3xl font-semibold text-rock py-4 border-b border-rock/8">Careers</a>
+    <a href="contact.html" class="mob-link font-display text-3xl font-semibold text-rhodo py-4 border-b border-rock/8">Contact</a>
+  </nav>
+  <div class="px-6 mt-8"><a href="contact.html" class="mob-link btn btn-accent w-full justify-center">Start a Project</a></div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="relative pt-40 pb-16 lg:pt-48 lg:pb-20 overflow-hidden">
+  <div class="contour-wrap">
+    <svg class="contour-svg" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path class="contour-line" d="M-100,300 C150,260 300,340 500,290 C700,240 850,310 1050,270 C1250,230 1350,280 1550,260" stroke="#15161A" stroke-opacity="0.05" stroke-width="1.5"/>
+      <path class="contour-line" d="M-100,370 C150,340 320,400 520,360 C720,320 870,380 1070,340 C1270,300 1370,350 1550,330" stroke="#C33A22" stroke-opacity="0.09" stroke-width="1.5"/>
+    </svg>
+  </div>
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 relative z-10">
+    <div class="rv-load eyebrow text-rhodo mb-6" style="animation-delay:0ms">Get in Touch</div>
+    <h1 class="rv-load font-display text-[clamp(2.4rem,5.5vw,4.2rem)] font-extrabold leading-[1.02] tracking-tight text-rock max-w-3xl text-balance" style="animation-delay:80ms">Let's start a conversation.</h1>
+    <p class="rv-load text-lg text-stone leading-relaxed max-w-2xl mt-7" style="animation-delay:160ms">Tell us about your project and we'll reply within 24 hours — in English or Nepali.</p>
+  </div>
+</section>
+
+<!-- CONTACT GRID -->
+<section class="pb-24 lg:pb-32 relative z-10">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="grid lg:grid-cols-12 gap-6">
+
+      <!-- Info column -->
+      <div class="lg:col-span-4 space-y-4">
+        <div class="rv card p-7">
+          <div class="w-11 h-11 rounded-xl bg-rhodo/10 flex items-center justify-center mb-5"><iconify-icon icon="ph:map-pin-bold" width="20" style="color:#C33A22"></iconify-icon></div>
+          <h3 class="font-display text-base font-bold text-rock mb-1.5">Office</h3>
+          <p class="text-stone text-sm leading-relaxed">Kathmandu, Nepal</p>
+        </div>
+        <div class="rv card p-7" data-dly="60">
+          <div class="w-11 h-11 rounded-xl bg-sky/10 flex items-center justify-center mb-5"><iconify-icon icon="ph:envelope-bold" width="20" style="color:#2B6E86"></iconify-icon></div>
+          <h3 class="font-display text-base font-bold text-rock mb-1.5">Email</h3>
+          <a href="mailto:info@evelynxsolutions.com.np" class="text-stone text-sm leading-relaxed hover:text-rhodo transition-colors">info@evelynxsolutions.com.np</a>
+        </div>
+        <div class="rv card p-7" data-dly="120">
+          <div class="w-11 h-11 rounded-xl bg-rhodo/10 flex items-center justify-center mb-5"><iconify-icon icon="ph:whatsapp-logo-bold" width="20" style="color:#C33A22"></iconify-icon></div>
+          <h3 class="font-display text-base font-bold text-rock mb-1.5">Phone / WhatsApp</h3>
+          <a href="https://wa.me/9779768969780" class="text-stone text-sm leading-relaxed hover:text-rhodo transition-colors">+977-9768969780</a>
+        </div>
+        <div class="rv card p-7" data-dly="180">
+          <div class="w-11 h-11 rounded-xl bg-sky/10 flex items-center justify-center mb-5"><iconify-icon icon="ph:clock-bold" width="20" style="color:#2B6E86"></iconify-icon></div>
+          <h3 class="font-display text-base font-bold text-rock mb-1.5">Working Hours</h3>
+          <p class="text-stone text-sm leading-relaxed">Sun – Fri, 9:00 AM – 6:00 PM (NPT)</p>
+        </div>
+      </div>
+
+      <!-- Form column -->
+      <div class="lg:col-span-8">
+        <div class="rv card p-8 sm:p-10" data-dly="80">
+          <form id="contactForm" class="space-y-6">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label class="field-label" for="name">Full Name *</label>
+                <input class="field-input" type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div>
+                <label class="field-label" for="email">Email *</label>
+                <input class="field-input" type="email" id="email" name="email" placeholder="you@company.com" required>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label class="field-label" for="phone">Phone</label>
+                <input class="field-input" type="tel" id="phone" name="phone" placeholder="+977 ...">
+              </div>
+              <div>
+                <label class="field-label" for="company">Company</label>
+                <input class="field-input" type="text" id="company" name="company" placeholder="Your company">
+              </div>
+            </div>
+            <div>
+              <label class="field-label" for="service">Service Needed</label>
+              <select class="field-input" id="service" name="service">
+                <option>Software Development</option>
+                <option>Cloud Solutions</option>
+                <option>Cybersecurity</option>
+                <option>Mobile Apps</option>
+                <option>AI &amp; Machine Learning</option>
+                <option>UI/UX &amp; Brand Design</option>
+                <option>Digital Marketing &amp; SEO</option>
+                <option>Managed IT</option>
+                <option>IT Hardware &amp; Procurement</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label" for="message">Message *</label>
+              <textarea class="field-input" id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-accent w-full sm:w-auto">Send Message <iconify-icon icon="ph:paper-plane-tilt-bold" width="16"></iconify-icon></button>
+          </form>
+          <div id="formSuccess" class="hidden text-center py-10">
+            <div class="w-14 h-14 rounded-full bg-rhodo/10 flex items-center justify-center mx-auto mb-5"><iconify-icon icon="ph:check-bold" width="26" style="color:#C33A22"></iconify-icon></div>
+            <h3 class="font-display text-xl font-bold text-rock mb-2">Message sent</h3>
+            <p class="text-stone text-sm">Thanks for reaching out — we'll be in touch within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-24 lg:py-28 relative z-10 bg-snow border-t border-rock/8">
+  <div class="max-w-[820px] mx-auto px-6 lg:px-10">
+    <div class="mb-12 text-center">
+      <span class="rv eyebrow text-rhodo mb-4 justify-center">FAQ</span>
+      <h2 class="rv font-display text-3xl sm:text-4xl font-bold tracking-tight text-rock" data-dly="80">Common questions</h2>
+    </div>
+    <div class="rv" data-dly="120">
+      <div class="acc-item">
+        <button class="acc-trigger">
+          <span class="font-display font-bold text-rock">Do you work with startups, or only established companies?</span>
+          <iconify-icon class="acc-icon" icon="ph:plus-bold" width="18"></iconify-icon>
+        </button>
+        <div class="acc-panel"><p class="text-stone text-sm leading-relaxed pb-6">Both. We scope engagements to fit — a first-time founder gets the same care as an enterprise client, just sized appropriately for budget and stage.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger">
+          <span class="font-display font-bold text-rock">Are you a registered, compliant company?</span>
+          <iconify-icon class="acc-icon" icon="ph:plus-bold" width="18"></iconify-icon>
+        </button>
+        <div class="acc-panel"><p class="text-stone text-sm leading-relaxed pb-6">Yes — OCR registered, PAN holder, and SSF-compliant, operating under Nepal's Companies Act 2063, Labour Act 2074, and Privacy Act 2075. Happy to share documentation on request.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger">
+          <span class="font-display font-bold text-rock">Who owns the intellectual property once a project is done?</span>
+          <iconify-icon class="acc-icon" icon="ph:plus-bold" width="18"></iconify-icon>
+        </button>
+        <div class="acc-panel"><p class="text-stone text-sm leading-relaxed pb-6">You do. All work product created for your project is assigned to you on completion — no lock-in, no ambiguity.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger">
+          <span class="font-display font-bold text-rock">What engagement models do you offer?</span>
+          <iconify-icon class="acc-icon" icon="ph:plus-bold" width="18"></iconify-icon>
+        </button>
+        <div class="acc-panel"><p class="text-stone text-sm leading-relaxed pb-6">Fixed-scope projects, monthly retainers, and dedicated team placements — whichever fits how you like to work. We'll recommend one during the discovery call.</p></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-trigger">
+          <span class="font-display font-bold text-rock">What happens after launch — do you offer ongoing support?</span>
+          <iconify-icon class="acc-icon" icon="ph:plus-bold" width="18"></iconify-icon>
+        </button>
+        <div class="acc-panel"><p class="text-stone text-sm leading-relaxed pb-6">Yes — every project includes a support window post-launch, and most clients move onto an SLA-backed managed support plan afterward.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-rock pt-20 pb-8 relative z-10 overflow-hidden">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 relative">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-14">
+      <div class="sm:col-span-2 lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-3 mb-5">
+          <span class="peak-mark" style="background:#F5F3EE"><iconify-icon icon="ph:mountains-bold" width="18" style="color:#15161A"></iconify-icon></span>
+          <span class="font-mono text-[0.92rem] font-medium tracking-[0.08em] text-paper">EVELYNX</span>
+        </a>
+        <p class="text-paper/40 text-sm leading-relaxed mb-5 max-w-xs">A Nepal-registered technology and creative partner delivering software, cloud, cybersecurity, and brand work from Kathmandu.</p>
+        <div class="flex gap-3">
+          <a href="https://wa.me/9779768969780" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-paper/50 hover:bg-rhodo hover:border-rhodo hover:text-white transition-all" aria-label="WhatsApp"><iconify-icon icon="ph:whatsapp-logo-bold" width="16"></iconify-icon></a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-paper/50 hover:bg-rhodo hover:border-rhodo hover:text-white transition-all" aria-label="LinkedIn"><iconify-icon icon="ph:linkedin-logo-bold" width="16"></iconify-icon></a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-paper/50 hover:bg-rhodo hover:border-rhodo hover:text-white transition-all" aria-label="Facebook"><iconify-icon icon="ph:facebook-logo-bold" width="16"></iconify-icon></a>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-mono text-[0.68rem] font-medium tracking-widest uppercase text-paper/45 mb-5">Company</h5>
+        <ul class="space-y-3">
+          <li><a href="about.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">About</a></li>
+          <li><a href="careers.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Careers</a></li>
+          <li><a href="work.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Case Studies</a></li>
+          <li><a href="contact.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-mono text-[0.68rem] font-medium tracking-widest uppercase text-paper/45 mb-5">Solutions</h5>
+        <ul class="space-y-3">
+          <li><a href="solutions.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Software Development</a></li>
+          <li><a href="solutions.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Cloud &amp; DevOps</a></li>
+          <li><a href="solutions.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Cybersecurity</a></li>
+          <li><a href="solutions.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Brand &amp; Design</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-mono text-[0.68rem] font-medium tracking-widest uppercase text-paper/45 mb-5">Get in Touch</h5>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2 text-sm text-paper/40"><iconify-icon icon="ph:map-pin-bold" width="14" class="mt-0.5 shrink-0"></iconify-icon>Kathmandu, Nepal</li>
+          <li class="flex items-center gap-2 text-sm text-paper/40"><iconify-icon icon="ph:phone-bold" width="14" class="shrink-0"></iconify-icon>+977-9768969780</li>
+          <li class="flex items-center gap-2 text-sm text-paper/40"><iconify-icon icon="ph:envelope-bold" width="14" class="shrink-0"></iconify-icon>info@evelynxsolutions.com.np</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-wrap gap-2.5 mb-10 pb-10 border-b border-white/10">
+      <span class="compliance-pill"><iconify-icon icon="ph:seal-check-bold" width="13"></iconify-icon>OCR Registered</span>
+      <span class="compliance-pill"><iconify-icon icon="ph:seal-check-bold" width="13"></iconify-icon>PAN Holder</span>
+      <span class="compliance-pill"><iconify-icon icon="ph:seal-check-bold" width="13"></iconify-icon>SSF Compliant</span>
+      <span class="compliance-pill">Companies Act 2063</span>
+      <span class="compliance-pill">Labour Act 2074</span>
+      <span class="compliance-pill">Privacy Act 2075</span>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-paper/25">&copy; 2026 Evelynx Solutions Pvt. Ltd. · Kathmandu, Nepal. All rights reserved.</p>
+      <div class="flex gap-6"><a href="#" class="text-xs text-paper/25 hover:text-paper/50 transition-colors">Privacy</a><a href="#" class="text-xs text-paper/25 hover:text-paper/50 transition-colors">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

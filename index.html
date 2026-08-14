@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evelynx Solutions — Software, Cloud &amp; Brand, Built in Kathmandu</title>
+<meta name="description" content="Evelynx Solutions is a Kathmandu-based technology and creative partner delivering software, cloud, cybersecurity, and brand work for Nepali businesses with global ambition.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%2315161A%22/><path d=%22M50 26 L74 68 L26 68 Z%22 fill=%22%23F5F3EE%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
+<link rel="stylesheet" href="assets/css/tailwind.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="prog"></div>
+
+<nav class="nav-bar" id="navbar">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 flex items-center justify-between h-[76px]">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="peak-mark"><iconify-icon icon="ph:mountains-bold" width="18" style="color:#F5F3EE"></iconify-icon></span>
+      <span class="font-mono text-[0.92rem] font-medium tracking-[0.08em] text-rock">EVELYNX</span>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="solutions.html" class="nav-link">Solutions</a>
+      <a href="work.html" class="nav-link">Work</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="hidden sm:inline-flex btn btn-accent btn-sm">Start a Project</a>
+      <button id="hamBtn" class="lg:hidden flex flex-col gap-[5px] p-2" aria-label="Open menu">
+        <span class="block w-5 h-[1.5px] bg-rock"></span>
+        <span class="block w-5 h-[1.5px] bg-rock"></span>
+        <span class="block w-3.5 h-[1.5px] bg-rock"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-overlay" id="mobMenu">
+  <div class="flex items-center justify-between px-6 h-[76px] border-b border-rock/8">
+    <span class="font-mono text-[0.92rem] font-medium tracking-[0.08em] text-rock">EVELYNX</span>
+    <button id="mobClose" class="p-2 text-rock" aria-label="Close menu"><iconify-icon icon="ph:x-bold" width="22"></iconify-icon></button>
+  </div>
+  <nav class="flex flex-col px-6 mt-4 overflow-y-auto">
+    <a href="solutions.html" class="mob-link font-display text-3xl font-semibold text-rock py-4 border-b border-rock/8">Solutions</a>
+    <a href="work.html" class="mob-link font-display text-3xl font-semibold text-rock py-4 border-b border-rock/8">Work</a>
+    <a href="about.html" class="mob-link font-display text-3xl font-semibold text-rock py-4 border-b border-rock/8">About</a>
+    <a href="careers.html" class="mob-link font-display text-3xl font-semibold text-rock py-4 border-b border-rock/8">Careers</a>
+    <a href="contact.html" class="mob-link font-display text-3xl font-semibold text-rock py-4 border-b border-rock/8">Contact</a>
+  </nav>
+  <div class="px-6 mt-8"><a href="contact.html" class="mob-link btn btn-accent w-full justify-center">Start a Project</a></div>
+</div>
+
+<!-- HERO -->
+<section class="relative min-h-[92vh] flex items-center overflow-hidden pt-20">
+  <div class="contour-wrap">
+    <svg class="contour-svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path class="contour-line" d="M-100,560 C150,510 300,610 500,550 C700,490 850,570 1050,520 C1250,470 1350,530 1550,500" stroke="#15161A" stroke-opacity="0.06" stroke-width="1.5"/>
+      <path class="contour-line" d="M-100,630 C150,590 320,670 520,620 C720,570 870,640 1070,590 C1270,540 1370,600 1550,570" stroke="#15161A" stroke-opacity="0.05" stroke-width="1.5"/>
+      <path class="contour-line" d="M-100,700 C160,670 330,730 540,690 C740,650 890,710 1090,670 C1280,630 1380,680 1550,650" stroke="#C33A22" stroke-opacity="0.11" stroke-width="1.5"/>
+      <path class="contour-line" d="M-100,770 C170,750 340,790 560,760 C760,730 900,780 1100,750 C1290,720 1390,760 1550,740" stroke="#2B6E86" stroke-opacity="0.11" stroke-width="1.5"/>
+      <path class="contour-line" d="M-100,480 C140,440 290,520 480,470 C680,420 830,490 1030,440 C1230,390 1330,450 1550,420" stroke="#15161A" stroke-opacity="0.04" stroke-width="1.5"/>
+    </svg>
+  </div>
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 py-16 w-full relative z-10">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7">
+        <div class="rv-load eyebrow text-rhodo mb-7" style="animation-delay:0ms">27.7172°N, 85.3240°E — Kathmandu, Nepal</div>
+        <h1 class="rv-load font-display text-[clamp(2.5rem,6.6vw,5.4rem)] font-extrabold leading-[0.98] tracking-tight text-rock mb-7 text-balance" style="animation-delay:80ms">We engineer<br><span class="text-rhodo">ambition</span> into<br>software and brand.</h1>
+        <p class="rv-load text-lg sm:text-xl text-stone leading-relaxed max-w-xl mb-10" style="animation-delay:160ms">Software, cloud, cybersecurity, and brand work under one roof — built for Nepali businesses that plan to compete well beyond Kathmandu.</p>
+        <div class="rv-load flex flex-wrap gap-4 mb-16" style="animation-delay:240ms">
+          <a href="contact.html" class="btn btn-accent">Start a Project <iconify-icon icon="ph:arrow-right-bold" width="17"></iconify-icon></a>
+          <a href="work.html" class="btn btn-outline">See Our Work</a>
+        </div>
+        <div class="rv-load flex flex-wrap gap-x-12 gap-y-6 font-mono" style="animation-delay:320ms">
+          <div><div class="text-2xl font-semibold text-rock counter" data-t="60" data-s="+">0+</div><div class="text-[0.68rem] text-stone mt-1 uppercase tracking-wider">Projects Delivered</div></div>
+          <div><div class="text-2xl font-semibold text-rock counter" data-t="35" data-s="+">0+</div><div class="text-[0.68rem] text-stone mt-1 uppercase tracking-wider">Clients Served</div></div>
+          <div><div class="text-2xl font-semibold text-rock">24<span class="text-rhodo">/7</span></div><div class="text-[0.68rem] text-stone mt-1 uppercase tracking-wider">Support Coverage</div></div>
+        </div>
+      </div>
+      <div class="lg:col-span-5 rv-load" style="animation-delay:200ms">
+        <div class="relative">
+          <div class="rounded-2xl overflow-hidden border border-rock/10 aspect-[4/5] shadow-xl shadow-rock/5">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop" alt="Evelynx engineering team at work" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-6 -left-6 right-6 bg-paper border border-rock/10 rounded-xl p-5 flex items-center gap-4 shadow-xl shadow-rock/10">
+            <div class="w-11 h-11 rounded-lg bg-rhodo/10 flex items-center justify-center shrink-0"><iconify-icon icon="ph:shield-check-bold" width="22" style="color:#C33A22"></iconify-icon></div>
+            <div>
+              <div class="text-sm font-semibold text-rock">OCR Registered · SSF Compliant</div>
+              <div class="text-xs text-stone mt-0.5">Licensed Pvt. Ltd. company, Kathmandu</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="py-5 border-y border-rock/8 relative z-10 bg-snow">
+  <div class="marquee-wrap">
+    <div class="marquee-track font-mono text-[0.8rem] font-medium text-stone tracking-widest uppercase">
+      <span class="px-8">Software Engineering</span><span class="text-rhodo/40">▲</span>
+      <span class="px-8">Cloud &amp; DevOps</span><span class="text-sky/40">▲</span>
+      <span class="px-8">Cybersecurity</span><span class="text-rhodo/40">▲</span>
+      <span class="px-8">AI &amp; Automation</span><span class="text-sky/40">▲</span>
+      <span class="px-8">Brand &amp; Digital Design</span><span class="text-rhodo/40">▲</span>
+      <span class="px-8">Growth Marketing</span><span class="text-sky/40">▲</span>
+      <span class="px-8">Managed IT</span><span class="text-rhodo/40">▲</span>
+      <span class="px-8">Software Engineering</span><span class="text-rhodo/40">▲</span>
+      <span class="px-8">Cloud &amp; DevOps</span><span class="text-sky/40">▲</span>
+      <span class="px-8">Cybersecurity</span><span class="text-rhodo/40">▲</span>
+      <span class="px-8">AI &amp; Automation</span><span class="text-sky/40">▲</span>
+      <span class="px-8">Brand &amp; Digital Design</span><span class="text-rhodo/40">▲</span>
+      <span class="px-8">Growth Marketing</span><span class="text-sky/40">▲</span>
+      <span class="px-8">Managed IT</span><span class="text-rhodo/40">▲</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED BY -->
+<section class="py-14 relative z-10 bg-snow border-b border-rock/8">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <p class="rv text-center font-mono text-[0.68rem] text-stone tracking-widest uppercase mb-8">Trusted by businesses across Nepal</p>
+    <div class="rv flex flex-wrap items-center justify-center gap-x-14 gap-y-6" data-dly="80">
+      <div class="flex items-center gap-2 text-rock/30 text-lg font-display font-bold tracking-tight hover:text-rock/60 transition-all"><iconify-icon icon="ph:storefront-bold" width="20"></iconify-icon>Himalayan Trade Co.</div>
+      <div class="flex items-center gap-2 text-rock/30 text-lg font-display font-bold tracking-tight hover:text-rock/60 transition-all"><iconify-icon icon="ph:bank-bold" width="20"></iconify-icon>FinServ Nepal</div>
+      <div class="flex items-center gap-2 text-rock/30 text-lg font-display font-bold tracking-tight hover:text-rock/60 transition-all"><iconify-icon icon="ph:truck-bold" width="20"></iconify-icon>Yeti Logistics</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS TEASER -->
+<section class="py-24 lg:py-32 relative z-10">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+      <div class="max-w-xl">
+        <span class="rv eyebrow text-rhodo mb-4">What We Do</span>
+        <h2 class="rv font-display text-4xl sm:text-5xl font-bold tracking-tight text-rock text-balance" data-dly="80">Every layer of your technology and brand, covered.</h2>
+      </div>
+      <a href="solutions.html" class="rv btn btn-outline btn-sm w-fit" data-dly="160">View All Solutions <iconify-icon icon="ph:arrow-right-bold" width="15"></iconify-icon></a>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="rv card p-8 group">
+        <div class="w-12 h-12 rounded-xl bg-rhodo/10 flex items-center justify-center mb-6"><iconify-icon icon="ph:code-bold" width="24" style="color:#C33A22"></iconify-icon></div>
+        <h3 class="font-display text-xl font-bold text-rock mb-3">Software Development</h3>
+        <p class="text-stone text-sm leading-relaxed mb-5">Bespoke web, mobile, and enterprise applications engineered around your exact workflow — from MVP to full-scale ERP.</p>
+        <a href="solutions.html" class="inline-flex items-center gap-2 text-rhodo text-sm font-semibold">Learn More <iconify-icon icon="ph:arrow-right" width="14"></iconify-icon></a>
+      </div>
+      <div class="rv card p-8 group" data-dly="80">
+        <div class="w-12 h-12 rounded-xl bg-sky/10 flex items-center justify-center mb-6"><iconify-icon icon="ph:cloud-bold" width="24" style="color:#2B6E86"></iconify-icon></div>
+        <h3 class="font-display text-xl font-bold text-rock mb-3">Cloud &amp; DevOps</h3>
+        <p class="text-stone text-sm leading-relaxed mb-5">AWS, Azure and GCP migrations with 24/7 managed infrastructure, CI/CD pipelines, and cost optimization built in.</p>
+        <a href="solutions.html" class="inline-flex items-center gap-2 text-sky text-sm font-semibold">Learn More <iconify-icon icon="ph:arrow-right" width="14"></iconify-icon></a>
+      </div>
+      <div class="rv card p-8 group" data-dly="160">
+        <div class="w-12 h-12 rounded-xl bg-rhodo/10 flex items-center justify-center mb-6"><iconify-icon icon="ph:shield-bold" width="24" style="color:#C33A22"></iconify-icon></div>
+        <h3 class="font-display text-xl font-bold text-rock mb-3">Cybersecurity</h3>
+        <p class="text-stone text-sm leading-relaxed mb-5">Multi-layer threat protection, penetration testing, and compliance audits that find the gaps before someone else does.</p>
+        <a href="solutions.html" class="inline-flex items-center gap-2 text-rhodo text-sm font-semibold">Learn More <iconify-icon icon="ph:arrow-right" width="14"></iconify-icon></a>
+      </div>
+      <div class="rv card p-8 group">
+        <div class="w-12 h-12 rounded-xl bg-sky/10 flex items-center justify-center mb-6"><iconify-icon icon="ph:sparkle-bold" width="24" style="color:#2B6E86"></iconify-icon></div>
+        <h3 class="font-display text-xl font-bold text-rock mb-3">AI &amp; Automation</h3>
+        <p class="text-stone text-sm leading-relaxed mb-5">Custom models, chat interfaces, and workflow automation that remove repetitive work from your team's day.</p>
+        <a href="solutions.html" class="inline-flex items-center gap-2 text-sky text-sm font-semibold">Learn More <iconify-icon icon="ph:arrow-right" width="14"></iconify-icon></a>
+      </div>
+      <div class="rv card p-8 group" data-dly="80">
+        <div class="w-12 h-12 rounded-xl bg-rhodo/10 flex items-center justify-center mb-6"><iconify-icon icon="ph:palette-bold" width="24" style="color:#C33A22"></iconify-icon></div>
+        <h3 class="font-display text-xl font-bold text-rock mb-3">Brand &amp; Digital Design</h3>
+        <p class="text-stone text-sm leading-relaxed mb-5">Research-driven identity and product design — built in Figma, shipped in code, and made to convert.</p>
+        <a href="solutions.html" class="inline-flex items-center gap-2 text-rhodo text-sm font-semibold">Learn More <iconify-icon icon="ph:arrow-right" width="14"></iconify-icon></a>
+      </div>
+      <div class="rv card p-8 group" data-dly="160">
+        <div class="w-12 h-12 rounded-xl bg-sky/10 flex items-center justify-center mb-6"><iconify-icon icon="ph:trend-up-bold" width="24" style="color:#2B6E86"></iconify-icon></div>
+        <h3 class="font-display text-xl font-bold text-rock mb-3">Growth Marketing</h3>
+        <p class="text-stone text-sm leading-relaxed mb-5">Data-driven campaigns, SEO, and analytics that grow your audience and revenue, backed by measurable KPIs.</p>
+        <a href="solutions.html" class="inline-flex items-center gap-2 text-sky text-sm font-semibold">Learn More <iconify-icon icon="ph:arrow-right" width="14"></iconify-icon></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="py-24 relative z-10 bg-rock overflow-hidden">
+  <div class="contour-wrap opacity-60">
+    <svg class="contour-svg" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path class="contour-line" d="M-100,300 C150,260 300,340 500,290 C700,240 850,310 1050,270 C1250,230 1350,280 1550,260" stroke="#F5F3EE" stroke-opacity="0.06" stroke-width="1.5"/>
+      <path class="contour-line" d="M-100,370 C150,340 320,400 520,360 C720,320 870,380 1070,340 C1270,300 1370,350 1550,330" stroke="#C33A22" stroke-opacity="0.12" stroke-width="1.5"/>
+    </svg>
+  </div>
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 relative z-10">
+    <div class="text-center mb-14">
+      <span class="rv eyebrow text-rhodo mb-4 justify-center">By The Numbers</span>
+      <h2 class="rv font-display text-3xl sm:text-4xl font-bold tracking-tight text-paper" data-dly="80">Measured in outcomes, not effort.</h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div class="rv text-center"><div class="text-5xl lg:text-6xl font-bold font-display text-paper counter" data-t="98" data-s="%">0%</div><div class="text-sm text-paper/40 mt-2 font-mono">Client Satisfaction</div></div>
+      <div class="rv text-center" data-dly="80"><div class="text-5xl lg:text-6xl font-bold font-display text-paper counter" data-t="40" data-s="%">0%</div><div class="text-sm text-paper/40 mt-2 font-mono">Avg. Cloud Cost Cut</div></div>
+      <div class="rv text-center" data-dly="160"><div class="text-5xl lg:text-6xl font-bold font-display text-paper counter" data-t="60" data-s="+">0+</div><div class="text-sm text-paper/40 mt-2 font-mono">Projects Delivered</div></div>
+      <div class="rv text-center" data-dly="240"><div class="text-5xl lg:text-6xl font-bold font-display text-paper">24<span class="text-rhodo">/7</span></div><div class="text-sm text-paper/40 mt-2 font-mono">Support Coverage</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section class="py-24 lg:py-32 relative z-10">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+      <div>
+        <span class="rv eyebrow text-rhodo mb-4">Featured Work</span>
+        <h2 class="rv font-display text-4xl sm:text-5xl font-bold tracking-tight text-rock" data-dly="80">Selected case studies</h2>
+      </div>
+      <a href="work.html" class="rv btn btn-outline btn-sm w-fit" data-dly="160">View All Work <iconify-icon icon="ph:arrow-right-bold" width="15"></iconify-icon></a>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="rv group card overflow-hidden !rounded-2xl">
+        <div class="aspect-[16/10] overflow-hidden"><img src="https://picsum.photos/seed/evelynx-ecom/900/560.jpg" alt="Himalayan Trade Co. e-commerce platform" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"></div>
+        <div class="p-8">
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tag tag-rhodo">Software Development</span><span class="tag tag-stone">E-commerce</span></div>
+          <h3 class="font-display text-2xl font-bold text-rock mb-2 group-hover:text-rhodo transition-colors">Himalayan Trade Co.: An E-Commerce Platform in 8 Weeks</h3>
+          <p class="text-stone text-sm leading-relaxed mb-4">From brief to launch in eight weeks flat, with the team available at every step of the build.</p>
+          <a href="work.html" class="inline-flex items-center gap-2 text-rhodo text-sm font-semibold">Read Case Study <iconify-icon icon="ph:arrow-up-right-bold" width="14"></iconify-icon></a>
+        </div>
+      </div>
+      <div class="rv group card overflow-hidden !rounded-2xl" data-dly="80">
+        <div class="aspect-[16/10] overflow-hidden"><img src="https://picsum.photos/seed/evelynx-security/900/560.jpg" alt="FinServ Nepal security assessment" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"></div>
+        <div class="p-8">
+          <div class="flex flex-wrap gap-2 mb-4"><span class="tag tag-sky">Cybersecurity</span><span class="tag tag-stone">Risk Assessment</span></div>
+          <h3 class="font-display text-2xl font-bold text-rock mb-2 group-hover:text-rhodo transition-colors">FinServ Nepal: Finding 12 Critical Gaps Before They Mattered</h3>
+          <p class="text-stone text-sm leading-relaxed mb-4">A thorough security assessment that surfaced risk the client didn't know they were carrying.</p>
+          <a href="work.html" class="inline-flex items-center gap-2 text-rhodo text-sm font-semibold">Read Case Study <iconify-icon icon="ph:arrow-up-right-bold" width="14"></iconify-icon></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 lg:py-32 relative z-10 bg-snow">
+  <div class="max-w-[760px] mx-auto px-6 lg:px-10 text-center">
+    <h2 class="rv font-display text-4xl sm:text-5xl font-bold tracking-tight text-rock mb-6 text-balance">Ready to build at altitude?</h2>
+    <p class="rv text-stone text-lg max-w-lg mx-auto mb-10" data-dly="80">Tell us about your project and we'll be in touch within 24 hours — in English or Nepali.</p>
+    <div class="rv flex flex-wrap justify-center gap-4" data-dly="160">
+      <a href="contact.html" class="btn btn-accent">Start a Project <iconify-icon icon="ph:arrow-right-bold" width="17"></iconify-icon></a>
+      <a href="about.html" class="btn btn-outline">Learn About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-rock pt-20 pb-8 relative z-10 overflow-hidden">
+  <div class="max-w-[1320px] mx-auto px-6 lg:px-10 relative">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-14">
+      <div class="sm:col-span-2 lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-3 mb-5">
+          <span class="peak-mark" style="background:#F5F3EE"><iconify-icon icon="ph:mountains-bold" width="18" style="color:#15161A"></iconify-icon></span>
+          <span class="font-mono text-[0.92rem] font-medium tracking-[0.08em] text-paper">EVELYNX</span>
+        </a>
+        <p class="text-paper/40 text-sm leading-relaxed mb-5 max-w-xs">A Nepal-registered technology and creative partner delivering software, cloud, cybersecurity, and brand work from Kathmandu.</p>
+        <div class="flex gap-3">
+          <a href="https://wa.me/9779768969780" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-paper/50 hover:bg-rhodo hover:border-rhodo hover:text-white transition-all" aria-label="WhatsApp"><iconify-icon icon="ph:whatsapp-logo-bold" width="16"></iconify-icon></a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-paper/50 hover:bg-rhodo hover:border-rhodo hover:text-white transition-all" aria-label="LinkedIn"><iconify-icon icon="ph:linkedin-logo-bold" width="16"></iconify-icon></a>
+          <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-paper/50 hover:bg-rhodo hover:border-rhodo hover:text-white transition-all" aria-label="Facebook"><iconify-icon icon="ph:facebook-logo-bold" width="16"></iconify-icon></a>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-mono text-[0.68rem] font-medium tracking-widest uppercase text-paper/45 mb-5">Company</h5>
+        <ul class="space-y-3">
+          <li><a href="about.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">About</a></li>
+          <li><a href="careers.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Careers</a></li>
+          <li><a href="work.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Case Studies</a></li>
+          <li><a href="contact.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-mono text-[0.68rem] font-medium tracking-widest uppercase text-paper/45 mb-5">Solutions</h5>
+        <ul class="space-y-3">
+          <li><a href="solutions.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Software Development</a></li>
+          <li><a href="solutions.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Cloud &amp; DevOps</a></li>
+          <li><a href="solutions.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Cybersecurity</a></li>
+          <li><a href="solutions.html" class="text-sm text-paper/40 hover:text-rhodo transition-colors">Brand &amp; Design</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-mono text-[0.68rem] font-medium tracking-widest uppercase text-paper/45 mb-5">Get in Touch</h5>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2 text-sm text-paper/40"><iconify-icon icon="ph:map-pin-bold" width="14" class="mt-0.5 shrink-0"></iconify-icon>Kathmandu, Nepal</li>
+          <li class="flex items-center gap-2 text-sm text-paper/40"><iconify-icon icon="ph:phone-bold" width="14" class="shrink-0"></iconify-icon>+977-9768969780</li>
+          <li class="flex items-center gap-2 text-sm text-paper/40"><iconify-icon icon="ph:envelope-bold" width="14" class="shrink-0"></iconify-icon>info@evelynxsolutions.com.np</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-wrap gap-2.5 mb-10 pb-10 border-b border-white/10">
+      <span class="compliance-pill"><iconify-icon icon="ph:seal-check-bold" width="13"></iconify-icon>OCR Registered</span>
+      <span class="compliance-pill"><iconify-icon icon="ph:seal-check-bold" width="13"></iconify-icon>PAN Holder</span>
+      <span class="compliance-pill"><iconify-icon icon="ph:seal-check-bold" width="13"></iconify-icon>SSF Compliant</span>
+      <span class="compliance-pill">Companies Act 2063</span>
+      <span class="compliance-pill">Labour Act 2074</span>
+      <span class="compliance-pill">Privacy Act 2075</span>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-paper/25">&copy; 2026 Evelynx Solutions Pvt. Ltd. · Kathmandu, Nepal. All rights reserved.</p>
+      <div class="flex gap-6"><a href="#" class="text-xs text-paper/25 hover:text-paper/50 transition-colors">Privacy</a><a href="#" class="text-xs text-paper/25 hover:text-paper/50 transition-colors">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
