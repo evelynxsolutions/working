@@ -289,3 +289,57 @@
 .card:hover::before { 
   opacity: 1; 
 }
+
+/* ==========================================================================
+   MOUSE POINTER EFFECTS (desktop / fine-pointer only — JS adds html.has-cursor)
+   Palette-matched: rhodo accent, works on light + dark sections.
+   ========================================================================== */
+
+html.has-cursor *:not(input):not(textarea):not(select) { cursor: none; }
+
+/* --- 1. Custom cursor: dot + trailing ring --- */
+.cursor-dot,
+.cursor-ring {
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999; /* above grain(1), nav(50), overlay(60), prog(100) */
+  border-radius: 50%;
+  opacity: 0; /* hidden until JS positions it — avoids a flash at 0,0 */
+}
+html.has-cursor .cursor-dot,
+html.has-cursor .cursor-ring { opacity: 1; }
+
+.cursor-dot {
+  width: 6px; height: 6px;
+  background: var(--rhodo);
+}
+
+.cursor-ring {
+  width: 34px; height: 34px;
+  border: 1.5px solid rgba(195, 58, 34, 0.5);
+  transition: width 0.25s ease, height 0.25s ease,
+              border-color 0.25s ease, background-color 0.25s ease;
+}
+.cursor-ring.is-active {
+  width: 52px; height: 52px;
+  border-color: var(--rhodo);
+  background: rgba(195, 58, 34, 0.08);
+}
+
+/* --- 2. Section spotlight glow (add data-spotlight to any section) --- */
+[data-spotlight] { position: relative; overflow: hidden; }
+[data-spotlight]::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background: radial-gradient(520px circle at var(--mx, 50%) var(--my, 30%),
+              rgba(195, 58, 34, 0.07), transparent 60%);
+}
+/* Keep section content above the glow */
+[data-spotlight] > * { position: relative; z-index: 1; }
+
+/* --- 3. Magnetic buttons (JS moves elements with data-magnetic) --- */
+[data-magnetic] { will-change: transform; }
+
+/* Safety: never show the custom cursor if motion is reduced */
+@media (prefers-reduced-motion: reduce) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
